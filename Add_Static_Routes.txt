@@ -1,0 +1,10 @@
+#add a static route 
+
+To add a default route from the GUI navigate to network tab and select virtual router
+locate static routes and add route. 
+
+Name = your_name
+Destination = 0.0.0.0/0
+Next hop = 192.168.1.1
+ok
+commit
