@@ -1,2 +1,2 @@
 When you boot up a new palo-alto it will cycle through two logins vm-login - pa-hdf before allowing you to login at vm-login
-some text
+some text some new text
