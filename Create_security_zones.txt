@@ -4,5 +4,12 @@ From the gui navigate to networks -> Zones (Selecet Add)
 Add Name,
 Add type interface Layer3
 ok
+Remember to hit commit
 
+# Assign interfaces to the zones
+
+From the gui navigate to networks --> interfaces 
+select your interface and change type to layer 3
+you can now add the security zone of choice. 
+Add a IPV4 address
 Remember to hit commit
