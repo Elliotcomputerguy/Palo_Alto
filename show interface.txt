@@ -1,0 +1,5 @@
+# show interface mgmt
+show interface management
+
+show all interfaces
+show interface all

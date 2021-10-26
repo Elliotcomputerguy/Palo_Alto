@@ -1,0 +1,10 @@
+#set mgmt interface
+
+configure
+set deviceconfig system ip-address 192.168.1.11
+set deviceconfig system netmask 255.255.255.0
+set deviceconfig system default-gateway 192.168.1.254
+set deviceconfig system dns-setting servers primary 8.8.8.8
+set deviceconfig system type static
+
+commit 
