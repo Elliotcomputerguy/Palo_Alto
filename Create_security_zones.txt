@@ -1,0 +1,8 @@
+# Create security zones
+
+From the gui navigate to networks -> Zones (Selecet Add)
+Add Name,
+Add type interface Layer3
+ok
+
+Remember to hit commit
