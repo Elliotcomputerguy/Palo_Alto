@@ -1,0 +1,10 @@
+# virtual router 
+
+From the GUI under Network tab --> Virtual routers
+
+If a new device, delete the default and create your own. Add interfaces into the virtual router. 
+
+Go to virtual router from network tab and select virtual router. Under routing settings add interfaces you want 
+associated with that routing instance. 
+
+To locate the routing table select more run time stats.
