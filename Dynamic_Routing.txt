@@ -1,0 +1,8 @@
+# Dynamic Routing
+
+To add routing protocols from networks select virtual router and add your dynamic routing protocol of choice. 
+Example OSPF 
+Select enable
+Router ID will be 11.11.11.11
+area id for area 0 will be 0.0.0.0. If it was area 1 it would be 1.1.1.1
+Add interface and done. Commit.
