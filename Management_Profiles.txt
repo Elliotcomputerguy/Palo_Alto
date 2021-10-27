@@ -1,0 +1,8 @@
+# Management profiles
+
+By default Palo alto will not allow icmp. In order to allow ping etc you need to create a management profile and assign it to the interface.
+
+Under the network tab select interfaces and choose your interface and select advanced. Select management profile and apply to the interface. 
+
+You can create multiple interface management profiles to allow different types of traffic. From network tab select interface mgmt 
+from network profiles and create a new profile with your desired traffic types. 
