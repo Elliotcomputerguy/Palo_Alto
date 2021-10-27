@@ -1,0 +1,7 @@
+# Setup DHCP
+
+From the GUI select the network tab and select DHCP. You can either setup a dhcp server or a relay
+
+Add interface facing the client network. On the Lease tab select ping ip when allocating new ip
+Add an IP pool Example = 10.1.0.51-10.1.0.99
+Under the Options tab add your default gateway, DNS etc 
