@@ -1,0 +1,10 @@
+# Security policy 
+
+By default security policies intrazone and interzone are enabled. Intrazone permits traffic from same zone. Interzone blocks any traffic from differnet zones.
+As Palo Alto being a NGFW it is stateful, meaning that the session that is initiated from a source address is allowed back in as it has 
+cahced the session from the source. On a non ngfw you would have to allow the reply traffic. 
+
+Remember that all policies are read from the top down. 
+
+To create a policy you would go to network tab and select security. Add and then add your source zones, addresses, services. 
+Universal is used by default and applies to both intra and inter.  
