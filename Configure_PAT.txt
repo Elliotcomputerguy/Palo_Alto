@@ -1,0 +1,11 @@
+# Configure PAT 
+
+To configure PAT go to the policies tab and select NAT. Hit the add button and add name etc. Under original packet tab
+Add your source security zone and Destination zone. Add your source address you want to allow to be patted. Under translated packet 
+tab we need to choose a translation type which will be dynamic ip and port for PAT, Interface address, Your interface and ip address of interface. 
+We will then need to add a policy to allow the traffic from inside zone to outside zone. Which is called interzone. intrazone is from the same zone. 
+So with policies tab selected, select security and select add. 
+
+Add name of rule. Rule type will be universal by default. Add source zone and source address, destination zone, destination address, service and permit action. 
+
+Commit 
