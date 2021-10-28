@@ -1,0 +1,12 @@
+#Virtual Wire
+
+A virtual wire is a connection between two devices going through the firewall. Basically the fw is a man in the middle. Good thing
+about a virtual wire is that you can create zones and create policies to permit or block traffic. 
+
+Viable solutions:
+
+2 switches going between the firewall
+
+1 switch and use 1 port from vlan 10 and another port from vlan 20 and associate these interfaces into the firewall. You can then create a 
+virtual wire.
+
