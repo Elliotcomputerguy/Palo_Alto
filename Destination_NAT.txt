@@ -14,8 +14,8 @@ Allow client 23.1.2.23/32 to reach 172.16.1.100 from the internet via public ip 
 
 To create a destination nat we go to policies and select NAT. Selecting add we name the policy and 
 select original packet. So from the internet we want to allow anyone to reach the dmz server. Our security source zone will be
-outside and our destination will also be outside. Not DMZ AS IT IS NAT to address range on outside interface. Source address will be any 
-one from the internet and our destination address will be the public nat address you are translating too. 
+outside and our destination will also be outside. Source address will be any
+one from the internet and our destination address will be the public ip. 
 Translated packet tab will be destination address translation. translation type will be static ip, private address you are translating. 
 Done. Commit. We then need to permit traffic from outside to dmz. We need to allow source outside to destination dmz via pre nat destination public address.
 
