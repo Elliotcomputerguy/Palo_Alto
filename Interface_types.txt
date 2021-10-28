@@ -1,0 +1,16 @@
+# interface types
+
+Layer 3 interfaces are the most common deployment. 
+
+Tap interfaces are designed for span/mirroring.
+
+Virtual wire also known as a bump in the wire are configured to permit traffic from an appliance to another through the firewall.
+
+                        [  fw1  ]
+                    eth0/1|   |eth0/2
+[ sw1 ]---virtual wire---      --virtual wire--[sw2]
+        virtual wire zone a   virtual wire zone b
+
+Layer 2 interfaces are used for layer 2 traffic. You can also create layer2 zones to permit or drop. 
+
+High availability 
