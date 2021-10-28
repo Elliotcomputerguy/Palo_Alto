@@ -8,3 +8,12 @@ Remember that all policies are read from the top down.
 
 To create a policy you would go to network tab and select security. Add and then add your source zones, addresses, services. 
 Universal is used by default and applies to both intra and inter.  
+
+To implement application based policy: 
+Go to policies, Security and add new. Add source, destination, under application tab select your application. Example: ssh
+Under service your see that it says application-default meaning that it is expecting the traffic on its well known port
+ok and commit
+
+To implement port based policy:
+Go to policies, Security and add new. Add source, destination, under service/url category, create new service object for tcp port 22.
+ok and commit 
