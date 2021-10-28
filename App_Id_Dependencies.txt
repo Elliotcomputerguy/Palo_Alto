@@ -1,0 +1,4 @@
+#App-ID Dependencies
+
+When creating application based policies you need to ensure you add all dependencies. Without these dependencies added to the policy
+the application you are either blocking or permitting will not work. 
