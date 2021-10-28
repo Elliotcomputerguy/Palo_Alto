@@ -1,0 +1,4 @@
+# colour code sercurity zones
+
+Go to objects and select tags, select add, under name choose your interface, select your colour and done. 
+Commit
