@@ -1,0 +1,17 @@
+# Source Nat Bi-directional
+
+Select PoliciesNAT and click Add.
+On the General tab, enter a descriptive Name for the NAT rule.
+On the Original Packet tab, select the zone you created for your DMZ in the Source Zone section (click Add and then select the zone) and the zone you created for the external network from the Destination Zone drop-down.
+In the Source Address section, Add the address object you created for your internal web server address.
+On the Translated Packet tab, select Static IP from the Translation Type drop-down in the Source Address Translation section and then select the address object you created for your external web server address from the Translated Address drop-down.
+In the Bi-directional field, select Yes.
+Click OK.
+
+Create 2 policies to permit bidirectional traffic. 
+
+outside_dmz
+source zone = outside_zone address any Destination zone = Dmz_Zone address public address 
+
+dmz_outside
+source zone = dmz_zone address internal address Destination zone = Outside_Zone address any
