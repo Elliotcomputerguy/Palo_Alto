@@ -1,0 +1,3 @@
+# tap interface
+
+A tap interface is a monitor port for span. 
