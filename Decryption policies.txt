@@ -1,0 +1,22 @@
+# Decryption policies
+
+In order for the firewall to carry out application layer inspection the fireawall needs to be able to 
+intercept that traffic. By design when a client establishes a connection with a web server on the public internet it will
+create a encrypted tunnel with a tls session key created from the public and private key that is signed by a trusted CA. 
+
+Decryption policies allow the firewall to be the man in the middle terminating connections for the client rather than terminating
+on the client. This way the firewall can inspect the traffic. 
+
+There are three types of Destination policies:
+
+SSL PROXY 
+
+Clients from the inside going to a wesite to the outside. 
+
+SSL inbound
+
+Internet users attempting to access a web server in the dmz. 
+
+SSH Proxy
+
+Clients from the inside going to a wesite to the outside. 
