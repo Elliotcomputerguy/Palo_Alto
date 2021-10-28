@@ -1,0 +1,6 @@
+# Application groups and converting to App-ID policies
+
+To create application groups, locate object and the select application group. Create application group. 
+
+To convert policy from port based to application based. From policies under policy optimizer select no app specified.
+Select app seen number on policy and create new policy or add to existing policy. 
