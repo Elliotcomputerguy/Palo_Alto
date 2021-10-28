@@ -1,0 +1,19 @@
+# App-ID
+
+What is App-ID. App ID is a next generation feature that inspects the traffic and makes sure it that the traffic is matching the default port
+for that traffic. It prevents a malicious actor from tunneling traffic behind other tcp ports. Example. Tunneling http traffic through 
+ssh port. 
+
+Standard policies would be port based. Next generation others you application based policies. 
+
+To implement application based policy: 
+Go to policies, Security and add new. Add source, destination, under application tab select your application. Example: ssh
+Under service your see that it says application-default meaning that it is expecting the traffic on its well known port
+ok and commit
+
+To implement port based policy:
+Go to policies, Security and add new. Add source, destination, under service/url category, create new service object for tcp port 22.
+ok and commit 
+
+
+
