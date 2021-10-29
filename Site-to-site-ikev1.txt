@@ -1,0 +1,76 @@
+
+
+How to create a site to site tunnel ikev
+
+Topology:
+
+10.1.0.0/24       1/1         1/3 23.1.2.11                23.1.2.12  1/3         1/1            10.2.0.0/24
+10.1.0.1 ------------[pa_fw01]-------------------------------------------[pa_fw02]-------------- 10.2.0.1
+
+Tunnel interface 10.7.7.11/24                                                                 Tunnel Interface 10.7.7.12/24
+      |_____________________________________________________________________________________________|
+
+Step [1]
+
+FW1
+Create tunnel interface
+From the gui select Network tab and select interfaces and select tunnel and add
+Interface id = 6783 comment = tunnel to site 2
+config = virtual router
+zone = new Zone called S2S_VPN_Zone
+ipv4 address = 10.7.7.11 
+
+FW2
+Create tunnel interface
+From the gui select Network tab and select interfaces and select tunnel and add
+Interface id = 6783 comment = tunnel to site 1
+config = virtual router
+zone = new Zone called S2S_VPN_Zone
+ipv4 address = 10.7.7.12
+
+Step [2]
+Controll Tunnel
+
+FW1
+From network tab select network profiles selecting IKE Crypto
+Create your IKE Crypto profile
+Then go to IPSec crypto and create your IPSEC profile
+Then go to IKE GATEWAY and create ike gateway profile. 
+Add name, interface, local ip address, peer address, pre-shared key (for authentication) 
+
+FW2
+From network tab select network profiles selecting IKE Crypto
+Create your IKE Crypto profile
+Then go to IPSec crypto and create your IPSEC profile
+Then go to IKE GATEWAY and create ike gateway profile. 
+Add name, Select IKEV1 ONLY interface, local ip address, peer address, pre-shared key (for authentication)
+
+Step [3]
+Create IPSec Tunnel
+
+FW1
+From network tab select IPSec Tunnels, select add
+Name, IKE Gateway profile, IPSec crypto profile, proxy ID (phase2(interesting_traffic) Add, Proxy_id name, local, 10.1.0.0/24 Remote, 10.2.0.0/24, protocol Any
+
+FW2
+From network tab select IPSec Tunnels, select add
+Name, IKE Gateway profile, IPSec crypto profile, proxy ID (phase2(interesting_traffic) Add, Proxy_id name, local, 10.2.0.0/24 Remote, 10.1.0.0/24, protocol Any
+
+Step [4] 
+Add static route
+
+FW1
+Under Network tab select virtual router, add new static route
+Name, Detination 10.2.0.0/24
+interface, tunnel.6783
+nexthop, 10.7.7.12
+
+FW2
+Under Network tab select virtual router, add new static route
+Name, Detination 10.1.0.0/24
+interface, tunnel.6783
+nexthop, 10.7.7.11
+
+Step [5]
+
+Add security policy on both firewalls to allow bidirectional from both zones. 
