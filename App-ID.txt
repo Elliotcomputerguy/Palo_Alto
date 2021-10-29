@@ -15,5 +15,6 @@ To implement port based policy:
 Go to policies, Security and add new. Add source, destination, under service/url category, create new service object for tcp port 22.
 ok and commit 
 
+Updates to App-ID
 
-
+Go to device and select dynamic updates and you will see updates available to download for App-ID. 
