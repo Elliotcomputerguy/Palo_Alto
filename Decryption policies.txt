@@ -9,14 +9,24 @@ on the client. This way the firewall can inspect the traffic.
 
 There are three types of Destination policies:
 
-SSL PROXY 
+SSL Forward Proxy 
 
 Clients from the inside going to a wesite to the outside. 
 
-SSL inbound
+To create a SSL forward proxy decryption policy go to policies and select decryption. Select add and add source destination and service and select decrypt or no decrypt and ok. You need to ensure that the firewall has a certificate that the client trusts. 
+
+In lab i created a self signed certificate by going to device tab and selecting certificates, generate and adding a certificate name 
+PA_FW01_Self_Signed and selected CA to make the FW a CA. Added certificate attributes, country, state etc, and selected forward trusted certificate, forward untrust certificate and trusted root CA. This allows the firewall to forward the trusted certificate and untrusted certificates. 
+
+
+SSL inbound Inspection
 
 Internet users attempting to access a web server in the dmz. 
 
 SSH Proxy
 
 Clients from the inside going to a wesite to the outside. 
+
+
+Decryption profile can be added by going to policies, decryption and select your rule or create new and at options you can specify a decryption profile or create one. They are also located under objects tab and locate decryption and select decryption profile.
+
