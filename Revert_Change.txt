@@ -1,0 +1,21 @@
+Roll back change 
+
+CMDS: 
+
+> configure
+
+# load config
+
++ key          key
+
+> from         Filename
+
+> last-saved   Last saved configuration
+
+> partial      partial config loading
+
+> version      Version
+
+# commit
+
+Example: load config version <version number> (to get version numbers type ?)
