@@ -1,0 +1,13 @@
+Createa admin accounts
+
+From device select administrators, add and create account. 
+
+Dynamic:
+Super user = can do anything on the firewall
+Device administrator = can do anything but cannot create another admin account 
+
+Role based:
+
+Go to admin roles from device tab.
+Create a name and disable what feature or service you want for that role. 
+
