@@ -1,0 +1,9 @@
+Configure mgmt
+
+Creating snapshots before applying changes. 
+
+From device tab, select setup and select operations tab. From operations tab select save named configuration snapshots.
+
+To restore you can load named configuration and select your configuration snapshot. 
+
+
