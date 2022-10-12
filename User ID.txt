@@ -1,0 +1,34 @@
+#User ID
+
+User-ID provides a security feature in which it maps users to an ip address allowing the firewall to create policies to allow
+or restrict users from accessing categories or destination addresses or services. It also allows for further auditing. 
+
+Setup USER-ID
+
+From network tab, select zones and select the zone you wish to enable USER-ID on. Select inside and select enable user identification. 
+Add subnets to be used in user-id and subnets to restrict from user-id policies. 
+
+From Device tab go to user id on left and under usermapping select the cog for agent setup. 
+
+in server monitor account add your account to access the active directory domain.
+
+Under Server monitoring tab add server address and its connection type WMI AD. 
+
+Commit and should show a connected status. 
+
+! If not over the mgmt interface you have to redirect services over that interface. ! From Device tab, select setup, and go to tab 
+services and customise.
+
+Under Device tab we need to add a ldap profile. Select LDAP from the left under server profiles
+select add, add a profile name, ip address of your ldap server. If you are not concerned about tls untick require tls cert, on
+server settings, for type add active directory, Base DN, Should self populate, Bind DN = Your user or service account to access AD
+
+Next step we need to go to Group mapping settings from user identification under Device tab. So under Group Mapping settings 
+add new and add name to group mapping profile, add ldap profile to server profile. 
+
+
+To check user mappings from cli 
+
+show user ip-user-mapping all
+
+
